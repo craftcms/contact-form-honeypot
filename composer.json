@@ -1,0 +1,45 @@
+{
+  "name": "craftcms/contact-form-honeypot",
+  "description": "Add a honeypot field to your Craft CMS contact form",
+  "version": "1.0.0",
+  "type": "craft-plugin",
+  "keywords": [
+    "cms",
+    "craftcms",
+    "yii2"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pixel & Tonic",
+      "homepage": "https://pixelandtonic.com/"
+    }
+  ],
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/contact-form-honeypot/issues?state=open",
+    "source": "https://github.com/craftcms/contact-form-honeypot",
+    "docs": "https://github.com/craftcms/contact-form-honeypot",
+    "rss": "https://github.com/craftcms/contact-form-honeypot/commits/master.atom"
+  },
+  "require": {
+    "craftcms/cms": "~3.0.0-beta.14"
+  },
+  "autoload": {
+    "psr-4": {
+      "craft\\contactform\\honeypot\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "extra": {
+    "name": "Contact Form Honeypot",
+    "handle": "contactFormHoneypot",
+    "changelogUrl": "https://raw.githubusercontent.com/craftcms/contact-form-honeypot/master/CHANGELOG.md",
+    "downloadUrl": "https://github.com/craftcms/contact-form-honeypot/archive/master.zip"
+  }
+}

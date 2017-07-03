@@ -68,7 +68,7 @@ class Plugin extends \craft\base\Plugin
     protected function settingsHtml(): string
     {
         // Get the settings that are being defined by the config file
-        $overrides = Craft::$app->getConfig()->getConfigFromFile(strtolower($this->handle));
+        $overrides = Craft::$app->getConfig()->getConfigFromFile(strtolower($this->id));
 
         return Craft::$app->view->renderTemplate('contact-form-honeypot/_settings', [
             'settings' => $this->getSettings(),

@@ -23,7 +23,7 @@
     "rss": "https://github.com/craftcms/contact-form-honeypot/commits/master.atom"
   },
   "require": {
-    "craftcms/cms": "~3.0.0-beta.14"
+    "craftcms/cms": "~3.0.0-beta.20"
   },
   "autoload": {
     "psr-4": {
@@ -38,7 +38,7 @@
   ],
   "extra": {
     "name": "Contact Form Honeypot",
-    "handle": "contactFormHoneypot",
+    "handle": "contact-form-honeypot",
     "changelogUrl": "https://raw.githubusercontent.com/craftcms/contact-form-honeypot/master/CHANGELOG.md",
     "downloadUrl": "https://github.com/craftcms/contact-form-honeypot/archive/master.zip"
   }

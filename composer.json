@@ -1,7 +1,7 @@
 {
   "name": "craftcms/contact-form-honeypot",
   "description": "Add a honeypot captcha to your Craft CMS contact form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "craft-plugin",
   "keywords": [
     "cms",

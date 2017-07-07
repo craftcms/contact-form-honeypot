@@ -5,7 +5,7 @@ This plugin allows you to add a [honeypot captcha](http://haacked.com/archive/20
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.14 or later, and the [Contact Form](https://github.com/craftcms/contact-form) plugin.
+This plugin requires Craft CMS 3.0.0-beta.20 or later, and the [Contact Form](https://github.com/craftcms/contact-form) plugin.
 
 
 ## Installation

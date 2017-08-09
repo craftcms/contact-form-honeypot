@@ -30,12 +30,6 @@
       "craft\\contactform\\honeypot\\": "src/"
     }
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
   "extra": {
     "name": "Contact Form Honeypot",
     "handle": "contact-form-honeypot",

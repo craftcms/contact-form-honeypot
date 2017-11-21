@@ -9,6 +9,11 @@ namespace craft\contactform\honeypot;
 
 use craft\base\Model;
 
+/**
+ * Class Settings
+ *
+ * @package craft\contactform\honeypot
+ */
 class Settings extends Model
 {
     /**

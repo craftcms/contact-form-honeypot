@@ -1,5 +1,9 @@
-Changelog
-=========
+# Release Notes for Contact Form Honeypot
+
+## Unreleased
+
+### Fixed
+- Fixed a PHP error that occurred if Contact Form wasn’t Composer-installed.
 
 ## 1.0.2 - 2017-12-04
 

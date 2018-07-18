@@ -32,6 +32,10 @@ class Plugin extends \craft\base\Plugin
     {
         parent::init();
 
+        if (!class_exists(Mailer::class)) {
+            return;
+        }
+
         Event::on(Mailer::class, Mailer::EVENT_BEFORE_SEND, function(SendEvent $e) {
             $settings = $this->getSettings();
 

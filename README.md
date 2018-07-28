@@ -10,18 +10,26 @@ This plugin requires Craft CMS 3.0.0-beta.20 or later, and the [Contact Form](ht
 
 ## Installation
 
-To install the plugin, follow these instructions.
+You can install this plugin from the Plugin Store or with Composer.
 
-1. Open your terminal and go to your Craft project:
+#### From the Plugin Store
 
-        cd /path/to/project
+Go to the Plugin Store in your project’s Control Panel and search for “Contact Form Honeypot”. Then click on the “Install” button in its modal window.
 
-2. Then tell Composer to load the plugin:
+#### With Composer
 
-        composer require craftcms/contact-form-honeypot
+Open your terminal and run the following commands:
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Contact Form Honeypot.
+```bash
+# go to the project directory
+cd /path/to/my-project.test
 
+# tell Composer to load the plugin
+composer require craftcms/contact-form-honeypot
+
+# tell Craft to install the plugin
+./craft install/plugin contact-form-honeypot
+```
 
 ## Setup
 

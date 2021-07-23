@@ -1,24 +1,24 @@
 {% import "_includes/forms" as forms %}
 
 {% macro configWarning(setting) -%}
-    {% set setting = '<code>'~setting~'</code>' %}
-    {{ "This is being overridden by the {setting} config setting in your {file} config file."|t('contact-form-honeypot', {
-        setting: setting,
-        file: 'contact-form-honeypot.php'
-    })|raw }}
+  {% set setting = '<code>'~setting~'</code>' %}
+  {{ "This is being overridden by the {setting} config setting in your {file} config file."|t('contact-form-honeypot', {
+    setting: setting,
+    file: 'contact-form-honeypot.php'
+  })|raw }}
 {%- endmacro %}
 
 {% from _self import configWarning %}
 
 {{ forms.textField({
-    first:        true,
-    label:        "Honeypot Form Param"|t('contact-form-honeypot'),
-    id:           'honeypot-param',
-    class:        'code',
-    name:         'honeypotParam',
-    instructions: "The name that the honeypot field should have."|t('contact-form-honeypot'),
-    value:        (settings.honeypotParam ?: ''),
-    disabled:     'honeypotParam' in overrides,
-    warning:      'honeypotParam' in overrides ? configWarning('honeypotParam'),
-    errors:       settings.getErrors('prependSender')
+  first:        true,
+  label:        "Honeypot Form Param"|t('contact-form-honeypot'),
+  id:           'honeypot-param',
+  class:        'code',
+  name:         'honeypotParam',
+  instructions: "The name that the honeypot field should have."|t('contact-form-honeypot'),
+  value:        (settings.honeypotParam ?: ''),
+  disabled:     'honeypotParam' in overrides,
+  warning:      'honeypotParam' in overrides ? configWarning('honeypotParam'),
+  errors:       settings.getErrors('prependSender')
 }) }}

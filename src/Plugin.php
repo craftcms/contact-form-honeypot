@@ -36,26 +36,30 @@ class Plugin extends \craft\base\Plugin
             return;
         }
 
-        Event::on(Mailer::class, Mailer::EVENT_BEFORE_SEND, function(SendEvent $e) {
-            $settings = $this->getSettings();
+        Event::on(
+            Mailer::class,
+            Mailer::EVENT_BEFORE_SEND,
+            function(SendEvent $e) {
+                $settings = $this->getSettings();
 
-            if (!$settings->honeypotParam) {
-                Craft::warning('Couldn\'t check honeypot field because the "Honeypot Form Param" setting isn\'t set yet.');
-                return;
+                if (!$settings->honeypotParam) {
+                    Craft::warning('Couldn\'t check honeypot field because the "Honeypot Form Param" setting isn\'t set yet.');
+                    return;
+                }
+
+                $val = Craft::$app->getRequest()->getBodyParam($settings->honeypotParam);
+
+                if ($val === null) {
+                    Craft::warning('Couldn\'t check honeypot field because no POST parameter named "'.$settings->honeypotParam.'" exists.');
+                    return;
+                }
+
+                // All conditions are favorable
+                if ($val !== '') {
+                    $e->isSpam = true;
+                }
             }
-
-            $val = Craft::$app->getRequest()->getBodyParam($settings->honeypotParam);
-
-            if ($val === null) {
-                Craft::warning('Couldn\'t check honeypot field because no POST parameter named "'.$settings->honeypotParam.'" exists.');
-                return;
-            }
-
-            // All conditions are favorable
-            if ($val !== '') {
-                $e->isSpam = true;
-            }
-        });
+        );
     }
 
     /**

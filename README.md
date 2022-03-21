@@ -28,7 +28,7 @@ cd /path/to/my-project.test
 composer require craftcms/contact-form-honeypot
 
 # tell Craft to install the plugin
-./craft install/plugin contact-form-honeypot
+./craft plugin/install contact-form-honeypot
 ```
 
 ## Setup

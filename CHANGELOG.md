@@ -1,5 +1,10 @@
 # Release Notes for Contact Form Honeypot
 
+## 2.0.0 -2022-05-03
+
+### Added
+- Added Craft 4 compatibility.
+
 ## 1.0.3 - 2022-05-03
 
 ### Fixed

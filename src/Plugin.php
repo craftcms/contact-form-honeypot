@@ -50,7 +50,7 @@ class Plugin extends \craft\base\Plugin
                 $val = Craft::$app->getRequest()->getBodyParam($settings->honeypotParam);
 
                 if ($val === null) {
-                    Craft::warning('Couldn\'t check honeypot field because no POST parameter named "'.$settings->honeypotParam.'" exists.');
+                    Craft::warning('Couldn\'t check honeypot field because no POST parameter named "' . $settings->honeypotParam . '" exists.');
                     return;
                 }
 

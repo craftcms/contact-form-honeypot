@@ -22,8 +22,8 @@
     "email": "support@craftcms.com",
     "issues": "https://github.com/craftcms/contact-form-honeypot/issues?state=open",
     "source": "https://github.com/craftcms/contact-form-honeypot",
-    "docs": "https://github.com/craftcms/contact-form-honeypot/blob/master/README.md",
-    "rss": "https://github.com/craftcms/contact-form-honeypot/commits/master.atom"
+    "docs": "https://github.com/craftcms/contact-form-honeypot/blob/main/README.md",
+    "rss": "https://github.com/craftcms/contact-form-honeypot/commits/main.atom"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -48,7 +48,7 @@
   "extra": {
     "name": "Contact Form Honeypot",
     "handle": "contact-form-honeypot",
-    "documentationUrl": "https://github.com/craftcms/contact-form-honeypot/blob/master/README.md"
+    "documentationUrl": "https://github.com/craftcms/contact-form-honeypot/blob/main/README.md"
   },
   "config": {
     "allow-plugins": {

@@ -7,8 +7,7 @@
     "craftcms",
     "contact",
     "form",
-    "honeypot",
-    "yii2"
+    "honeypot"
   ],
   "license": "MIT",
   "authors": [
@@ -21,23 +20,23 @@
     "email": "support@craftcms.com",
     "issues": "https://github.com/craftcms/contact-form-honeypot/issues?state=open",
     "source": "https://github.com/craftcms/contact-form-honeypot",
-    "docs": "https://github.com/craftcms/contact-form-honeypot/blob/main/README.md",
-    "rss": "https://github.com/craftcms/contact-form-honeypot/commits/main.atom"
+    "docs": "https://github.com/craftcms/contact-form-honeypot/blob/3.x/README.md",
+    "rss": "https://github.com/craftcms/contact-form-honeypot/commits/3.x.atom"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cms": "^4.0.0-RC3|^5.0.0-beta.1"
+    "craftcms/cms": "^6.0.0-alpha.1",
+    "craftcms/contact-form": "*"
   },
   "require-dev": {
-    "craftcms/contact-form": "*",
     "craftcms/ecs": "dev-main",
     "craftcms/phpstan": "dev-main",
     "craftcms/rector": "dev-main"
   },
   "autoload": {
     "psr-4": {
-      "craft\\contactform\\honeypot\\": "src/"
+      "CraftCms\\ContactForm\\Honeypot\\": "src/"
     }
   },
   "scripts": {
@@ -48,12 +47,9 @@
   "extra": {
     "name": "Contact Form Honeypot",
     "handle": "contact-form-honeypot",
-    "documentationUrl": "https://github.com/craftcms/contact-form-honeypot/blob/main/README.md"
+    "documentationUrl": "https://github.com/craftcms/contact-form-honeypot/blob/3.x/README.md"
   },
   "config": {
-    "platform": {
-      "php": "8.0.2"
-    },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
       "craftcms/plugin-installer": true

@@ -1,0 +1,23 @@
+{% import "_includes/forms" as forms %}
+
+{% macro configWarning(setting) -%}
+    {{ 'This is being overridden by the {setting} config setting in your {file} config file.'|t('contact-form', {
+        setting: "<code>#{setting}</code>",
+        file: 'config/craft/contact-form.php',
+    })|raw }}
+{%- endmacro %}
+
+{% from _self import configWarning %}
+
+{{ forms.textField({
+  first: true,
+  label: 'Honeypot Form Param'|t('contact-form-honeypot'),
+  id: 'honeypot-param',
+  class: 'code',
+  name: 'honeypotParam',
+  instructions: 'The `name` that the honeypot input is expected to have.'|t('contact-form-honeypot'),
+  value: old('settings.honeypotParam', settings.honeypotParam),
+  disabled: 'honeypotParam' in overrides,
+  warning: 'honeypotParam' in overrides ? configWarning('honeypotParam'),
+  errors: errors.get('honeypotParam'),
+}) }}

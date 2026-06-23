@@ -1,31 +1,17 @@
 <?php
-/**
- * @link https://craftcms.com/
- * @copyright Copyright (c) Pixel & Tonic, Inc.
- * @license MIT
- */
 
-namespace craft\contactform\honeypot;
+namespace CraftCms\ContactForm\Honeypot;
 
-use craft\base\Model;
+use CraftCms\Cms\Plugin\PluginSettings;
 
-/**
- * Class Settings
- */
-class Settings extends Model
+class Settings extends PluginSettings
 {
-    /**
-     * @var string|null
-     */
-    public $honeypotParam;
+    public ?string $honeypotParam = null;
 
-    /**
-     * @inheritdoc
-     */
-    public function rules(): array
+    public function getRules(): array
     {
         return [
-            [['honeypotParam'], 'string'],
+            'honeypotParam' => 'string',
         ];
     }
 }

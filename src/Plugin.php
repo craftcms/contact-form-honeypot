@@ -41,7 +41,7 @@ class Plugin extends BasePlugin
             /** @var Settings $settings */
             $settings = Plugin::getInstance()->getSettings();
 
-            if (isset($event->submission->variables[$settings->honeypotParam])) {
+            if (isset($event->message->variables[$settings->honeypotParam])) {
                 $event->isSpam = true;
             }
         });

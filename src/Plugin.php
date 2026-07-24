@@ -15,7 +15,7 @@ class Plugin extends BasePlugin
 {
     public bool $hasCpSettings = true;
 
-    public function bootPlugin(): void
+    public function boot(): void
     {
         Event::listen(function (ValidationRulesResolving $event) {
             if (! $event->ruleset instanceof SubmissionRuleset) {

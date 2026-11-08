@@ -5,7 +5,7 @@ This plugin allows you to add a [honeypot captcha](http://haacked.com/archive/20
 
 ## Requirements
 
-This plugin requires Craft CMS 4.0.0+ or 5.0.0+, and the [Contact Form](https://github.com/craftcms/contact-form) plugin.
+This plugin requires Craft CMS 6.0 or later, PHP 8.5 or later, and [Contact Form](https://github.com/craftcms/contact-form) 4.0 or later. It doesn’t need the `craftcms/yii2-adapter` package.
 
 
 ## Installation
@@ -28,12 +28,22 @@ cd /path/to/my-project.test
 composer require craftcms/contact-form-honeypot
 
 # tell Craft to install the plugin
-./craft plugin/install contact-form-honeypot
+php artisan craft:plugin:install contact-form-honeypot
 ```
 
 ## Setup
 
 To configure the plugin, go to Settings → Contact Form Honeypot, and choose a param name that your honeypot field should have.
+
+You can also set it in `config/craft/contact-form-honeypot.php`, which overrides the control panel setting:
+
+```php
+<?php
+
+return [
+    'honeypotParam' => 'secretHoneypotParamName',
+];
+```
 
 Then edit your contact form template(s), and add the honeypot field.
 
@@ -46,3 +56,5 @@ You can hide the field with CSS:
 ```css
 input#secretHoneypotParamName { display: none; }
 ```
+
+Any non-empty value in the honeypot field marks the submission as spam, so Contact Form doesn’t send it and responds with its generic error message. Values containing only whitespace are trimmed to empty by Laravel, so they aren’t treated as spam.

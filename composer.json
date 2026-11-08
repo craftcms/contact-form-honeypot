@@ -26,13 +26,15 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cms": "^6.0.0-alpha.1",
-    "craftcms/contact-form": "*"
+    "php": "^8.5",
+    "craftcms/cms": "^6.0.0",
+    "craftcms/contact-form": "^4.0"
   },
   "require-dev": {
-    "craftcms/ecs": "dev-main",
-    "craftcms/phpstan": "dev-main",
-    "craftcms/rector": "dev-main"
+    "larastan/larastan": "^3.13",
+    "laravel/pint": "^1.22",
+    "orchestra/testbench": "^11.0",
+    "phpstan/phpstan": "^2.1"
   },
   "autoload": {
     "psr-4": {
@@ -40,8 +42,8 @@
     }
   },
   "scripts": {
-    "check-cs": "ecs check --ansi",
-    "fix-cs": "ecs check --ansi --fix",
+    "check-cs": "pint --test",
+    "fix-cs": "pint",
     "phpstan": "phpstan --memory-limit=1G"
   },
   "extra": {
@@ -50,8 +52,10 @@
     "documentationUrl": "https://github.com/craftcms/contact-form-honeypot/blob/3.x/README.md"
   },
   "config": {
+    "platform": {
+      "php": "8.5"
+    },
     "allow-plugins": {
-      "yiisoft/yii2-composer": true,
       "craftcms/plugin-installer": true
     }
   }

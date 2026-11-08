@@ -26,8 +26,9 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cms": "^6.0.0-alpha.1",
-    "craftcms/contact-form": "*"
+    "php": "^8.5",
+    "craftcms/cms": "^6.0.0",
+    "craftcms/contact-form": "^4.0"
   },
   "require-dev": {
     "larastan/larastan": "^3.13",

@@ -1,5 +1,9 @@
 # Release Notes for Contact Form Honeypot
 
+## 2.2.1 - 2026-11-10
+
+- Contact Form Honeypot now suggests the `craftcms/yii2-adapter` package, which is required on Craft 6.
+
 ## 2.2.0 - 2026-11-10
 
 - Added Craft 6 compatibility, when the `craftcms/yii2-adapter` package is installed.

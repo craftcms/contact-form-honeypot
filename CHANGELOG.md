@@ -1,6 +1,6 @@
 # Release Notes for Contact Form Honeypot
 
-## Unreleased
+## 2.2.0 - 2026-11-10
 
 - Added Craft 6 compatibility, when the `craftcms/yii2-adapter` package is installed.
 

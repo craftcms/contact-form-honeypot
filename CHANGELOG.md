@@ -7,6 +7,7 @@
 - The Honeypot Form Param setting can now be overridden from `config/craft/contact-form-honeypot.php`.
 - Spam submissions now get Contact Form’s generic error response, instead of appearing to succeed.
 - Honeypot values containing only whitespace are no longer treated as spam.
+- Added Arabic, Dutch, French, German, Italian, and Spanish translations.
 
 ## 2.1.0 - 2024-03-19
 

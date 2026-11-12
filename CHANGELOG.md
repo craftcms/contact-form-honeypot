@@ -1,5 +1,21 @@
 # Release Notes for Contact Form Honeypot
 
+## 3.0.0 - 2026-11-12
+
+- Contact Form Honeypot now requires Craft CMS 6.0 or later, PHP 8.5 or later, and Contact Form 4.0 or later, and runs natively on Craft 6 without the `craftcms/yii2-adapter` package.
+- The plugin’s classes have moved to the `CraftCms\ContactForm\Honeypot` namespace.
+- The Honeypot Form Param setting can now be overridden from `config/craft/contact-form-honeypot.php`.
+- Honeypot values containing only whitespace are no longer treated as spam.
+- Added Arabic, Dutch, French, German, Italian, and Spanish translations.
+
+## 2.2.1 - 2026-11-10
+
+- Contact Form Honeypot now suggests the `craftcms/yii2-adapter` package, which is required on Craft 6.
+
+## 2.2.0 - 2026-11-10
+
+- Added Craft 6 compatibility, when the `craftcms/yii2-adapter` package is installed.
+
 ## 2.1.0 - 2024-03-19
 
 - Added Craft 5 compatibility.

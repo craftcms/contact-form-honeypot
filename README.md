@@ -57,4 +57,4 @@ You can hide the field with CSS:
 input#secretHoneypotParamName { display: none; }
 ```
 
-Any non-empty value in the honeypot field marks the submission as spam, so Contact Form doesn’t send it and responds with its generic error message. Values containing only whitespace are trimmed to empty by Laravel, so they aren’t treated as spam.
+Any non-empty value in the honeypot field marks the submission as spam, so Contact Form logs it instead of sending it, and responds with its success message so the bot can’t tell it was caught. Values containing only whitespace are trimmed to empty by Laravel, so they aren’t treated as spam.
